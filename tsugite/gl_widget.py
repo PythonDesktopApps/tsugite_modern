@@ -6,7 +6,7 @@ import PyQt5.QtGui as qtg
 import PyQt5.QtCore as qtc
 import PyQt5.QtOpenGL as qgl
 
-import OpenGL.GL as GL  # imports start with gl
+import OpenGL.GL as GL  # imports start with GL
 
 from joint_types import JointType
 from geometries import Geometries
