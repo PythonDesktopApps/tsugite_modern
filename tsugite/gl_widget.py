@@ -97,7 +97,7 @@ class GLWidget(qgl.QGLWidget):
     def clear(self):
         # color it white for better visibility
         GL.glClearColor(255, 255, 255, 1)
-        GL.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT)
+        GL.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT | GL.GL_STENCIL_BUFFER_BIT)
         
     def resizeGL(self, w, h):
         def perspective(fovY, aspect, zNear, zFar):
@@ -130,8 +130,6 @@ class GLWidget(qgl.QGLWidget):
     def paintGL(self):
         self.clear()
         
-        GL.glClear(GL.GL_COLOR_BUFFER_BIT | GL.GL_DEPTH_BUFFER_BIT | GL.GL_STENCIL_BUFFER_BIT)
-        # glViewport(0,0,self.width-self.wstep,self.height)
         GL.glLoadIdentity()
 
         self.display.update()
