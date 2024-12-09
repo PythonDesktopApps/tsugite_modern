@@ -5,7 +5,6 @@ import OpenGL.GL as GL
 import OpenGL.GL.shaders as GLSH
 
 from core.utils import Utils
-from core.attribute import Attribute
 
 from buffer import ElementProperties
 from view_settings import ViewSettings
